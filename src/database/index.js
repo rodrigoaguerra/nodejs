@@ -1,7 +1,12 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-mongoose.connect('mongodb://localhost/noderest', {useFindAndModify: false, useNewUrlParser: true });
+// boa
+mongoose.connect('mongodb://localhost/noderest', {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+});
+// pq a linha de baixo é necessária?
 mongoose.Promise = global.Promise;
 
-
-module.exports = mongoose;
+// evite module.exports
+export default mongoose;
