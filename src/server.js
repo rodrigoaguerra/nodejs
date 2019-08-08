@@ -1,11 +1,12 @@
-import express from "express";
-import bodyParser from "body-parser";
+import express from 'express';
+import bodyParser from 'body-parser';
+import fileLoader from './app/controllers/authRoutes';
 
-const app =  express();
+const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended : false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-require('./app/controllers/index')(app);
+fileLoader(app);
 
-app.listen(3000);
+app.listen(3045);
