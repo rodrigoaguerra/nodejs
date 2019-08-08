@@ -48,10 +48,10 @@ const UserSchema = new mongoose.Schema({
 });
 
 // encriptografa a senha com bcryptjs
+// eslint-disable-next-line func-names
 UserSchema.pre('save', async function (next) {
   const hash = await bcrypt.hash(this.password, 10);
   this.password = hash;
-
   next();
 });
 

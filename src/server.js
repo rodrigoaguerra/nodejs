@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import fileLoader from './app/controllers/authRoutes';
+import fileLoader from './app/controllers/';
 
 const app = express();
 
