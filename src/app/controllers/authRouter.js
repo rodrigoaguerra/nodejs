@@ -1,4 +1,3 @@
-
 import express from 'express';
 import register from './auth/register';
 import authenticate from './auth/authenticate';
