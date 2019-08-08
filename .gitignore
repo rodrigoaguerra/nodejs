@@ -455,4 +455,7 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
+# Variaveis de ambiente
+.env
+
 # End of https://www.gitignore.io/api/node,linux,visualstudio

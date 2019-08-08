@@ -1,9 +1,8 @@
 import jwt from 'jsonwebtoken';
-import authConfig from 'config/auth.json';
 
 // gera token cadastro de usuário
 export const generateToken = (parms = {}) => (
-  jwt.sign(parms, authConfig.secret, {
+  jwt.sign(parms, process.env.SECRET_API, {
     expiresIn: 86400,
   })
 );

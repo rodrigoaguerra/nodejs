@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import authConfig from 'config/auth.json';
 
 export default (req, res, next) => {
   const authHeader = req.headers.authorization;
@@ -13,7 +12,7 @@ export default (req, res, next) => {
 
   if (!/^Bearer$/i.test(scheme)) { return res.status(401).send({ error: 'Token malformatted' }); }
 
-  jwt.verify(token, authConfig.secret, (err, decoded) => {
+  jwt.verify(token, process.env.SECRET_API, (err, decoded) => {
     if (err) return res.status(401).send({ error: 'Token invalid' });
 
     req.userId = decoded.id;

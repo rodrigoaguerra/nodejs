@@ -1,6 +1,6 @@
-import express from 'express';
 import bodyParser from 'body-parser';
-import fileLoader from './app/controllers/';
+import express from 'express';
+import fileLoader from 'app/controllers/';
 
 const app = express();
 
@@ -9,4 +9,4 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 fileLoader(app);
 
-app.listen(3045);
+app.listen(3047);
